@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+void traverse(link h, void (*visit)(link)){
+    if(h == NULL)
+        return ;
+    visit(h);
+    traverse(h->left);
+    traverse(h->right);
+}
